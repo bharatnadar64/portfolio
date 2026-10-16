@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Bharat Nadar | Software Developer Portfolio</title>
+  <meta name="title" content="Bharat Nadar | Software Developer Portfolio">
+  <meta name="description"
+    content="Portfolio of Bharat Nadar, a software developer based in Mumbai specializing in full-stack web applications, practical engineering, and AI & automation tools.">
+  <meta name="keywords"
+    content="Bharat Nadar, Software Developer, Full-Stack Developer, Mumbai, MCA, SIESCOMS, React, Node.js, Spring Boot, Java, Python, Web Development, Portfolio">
+  <meta name="author" content="Bharat Nadar">
+  <meta name="theme-color" content="#0A0D14">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bharat Nadar | Software Developer Portfolio">
+  <meta property="og:description"
+    content="Full-stack developer building practical web applications, intelligent automation tools, and scalable software solutions.">
+  <meta property="og:image" content="./assets/images/face.jpg">
+
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Bharat Nadar | Software Developer Portfolio">
+  <meta property="twitter:description"
+    content="Full-stack developer building practical web applications, intelligent automation tools, and scalable software solutions.">
+  <meta property="twitter:image" content="./assets/images/face.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+
+  <!-- Google Fonts Preconnect & Stylesheets (With System Fallbacks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- Skip to Main Content for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       1. Sticky Navigation Bar
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Bharat Nadar Homepage">
+        <span>bharat<span class="brand-dot">.</span>dev</span>
+        <span class="brand-sub">SDE</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#leadership" class="nav-link">Leadership</a>
+        <a href="#education" class="nav-link">Education</a>
+
+      </nav>
+
+      <!-- Desktop Action CTA & Mobile Hamburger -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Let's Connect</a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu"
+          aria-expanded="false" aria-controls="mobile-drawer">
+          <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav class="mobile-nav-list" aria-label="Mobile Navigation">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#leadership" class="mobile-nav-link">Leadership</a>
+      <a href="#education" class="mobile-nav-link">Education</a>
+
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="./assets/documents/bharat-resume.pdf" download="bharat-resume.pdf" class="btn btn-secondary"
+        target="_blank" style="width: 100%;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download Resume
+      </a>
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Let's Connect</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ========================================================================
+         2. Hero & About Section (Merged)
+         ======================================================================== -->
+    <section class="hero-section" id="about">
+      <div id="hero"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Introduction & Professional Bio -->
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="status-indicator-dot" aria-hidden="true"></span>
+              <span>Exploring software engineering opportunities</span>
+            </div>
+
+            <h1 class="hero-name">Bharat Nadar</h1>
+
+            <p class="hero-headline">
+              <span class="gradient-text">Building software that solves real problems.</span>
+            </p>
+
+            <span class="hero-subtitle">Full-Stack Developer &bull; Systems &amp; Applied AI &bull; MCA Student</span>
+
+            <div class="hero-bio">
+              <p class="hero-paragraph">
+                I am a Mumbai-based software developer passionate about turning ideas into high-impact products. Driven
+                by solid computer science fundamentals, I build full-stack web applications, architect decoupled backend
+                services, and integrate applied AI pipelines with a focus on reliability, performance, and clean code.
+              </p>
+              <p class="hero-paragraph-sub">
+                Currently pursuing my <strong>Master of Computer Applications (MCA) at SIESCOMS</strong> after
+                graduating with a <strong>9.55 CGPA</strong> in B.Sc. IT (rank holder throughout degree). Beyond
+                engineering, I have mentored <strong>80+ learners</strong> in full-stack development, combining
+                architectural discipline with clear technical communication.
+              </p>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                Explore My Work
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <a href="./assets/documents/bharat-resume.pdf" download="bharat-resume.pdf" class="btn btn-secondary"
+                target="_blank" id="hero-resume-btn" title="Download official PDF resume">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download Resume
+              </a>
+
+              <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+            </div>
+
+            <div class="hero-social-links">
+              <a href="https://github.com/bharatnadar64" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" aria-label="Bharat Nadar GitHub Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+                GitHub
+              </a>
+
+              <a href="https://linkedin.com/in/bharat-nadar-80ab6426a" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" aria-label="Bharat Nadar LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                LinkedIn
+              </a>
+
+              <a href="https://leetcode.com/u/bharatnadar64/" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" aria-label="Bharat Nadar LeetCode Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                LeetCode
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Identity & Key Highlights -->
+          <div class="hero-visual-card">
+            <div class="hero-avatar-wrapper">
+              <img src="./assets/images/face.jpg" alt="Bharat Nadar - Software Developer" class="hero-avatar-img">
+            </div>
+            <div class="hero-quick-info">
+              <div class="quick-info-item">
+                <div class="quick-info-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="quick-info-content">
+                  <span class="quick-info-label">Location</span>
+                  <span class="quick-info-value">Mumbai, Maharashtra, India</span>
+                </div>
+              </div>
+
+              <div class="quick-info-item">
+                <div class="quick-info-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div class="quick-info-content">
+                  <span class="quick-info-label">Current Education</span>
+                  <span class="quick-info-value">MCA &bull; SIESCOMS, Mumbai</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compact Proof Points Row -->
+        <div class="proof-points-wrapper">
+          <div class="proof-points-grid">
+            <div class="proof-point-card">
+              <div class="proof-point-metric">
+                <span class="highlight">MCA</span> Student
+              </div>
+              <div class="proof-point-label">SIESCOMS, Mumbai</div>
+              <div class="proof-point-desc">Pursuing Master of Computer Applications (2025–Present)</div>
+            </div>
+
+            <div class="proof-point-card">
+              <div class="proof-point-metric">
+                <span class="highlight-cyan">9.55</span> CGPA
+              </div>
+              <div class="proof-point-label">B.Sc. Information Technology</div>
+              <div class="proof-point-desc">Rank holder throughout degree (N.G. Acharya &amp; D.K. Marathe College)
+              </div>
+            </div>
+
+            <div class="proof-point-card">
+              <div class="proof-point-metric">
+                <span class="highlight">80+</span> Students
+              </div>
+              <div class="proof-point-label">Programming Instructor</div>
+              <div class="proof-point-desc">Taught full-stack, competitive programming &amp; web tech (Anubhav
+                Institute)</div>
+            </div>
+
+            <div class="proof-point-card">
+              <div class="proof-point-metric">
+                <span class="highlight-cyan">Top 40</span> / 229
+              </div>
+              <div class="proof-point-label">IndiaNext Hackathon 2026</div>
+              <div class="proof-point-desc">Team Lead for CyberShield in a 24-hour national hackathon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ========================================================================
+         4. Technical Skills Section
+         ======================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Technical Competencies</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">
+            Curated technologies from practical project development, academic study, and technical instruction.
+          </p>
+        </div>
+
+        <!-- 6 Grouped Skill Categories -->
+        <div class="skills-grid">
+
+          <!-- Programming Languages -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-badges-wrapper">
+              <span class="skill-badge">C</span>
+              <span class="skill-badge">C++</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Frontend Development -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Frontend Development</h3>
+            </div>
+            <div class="skill-badges-wrapper">
+              <span class="skill-badge">React.js</span>
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Backend Development -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Backend Development</h3>
+            </div>
+            <div class="skill-badges-wrapper">
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">Express.js</span>
+              <span class="skill-badge">Spring Boot</span>
+              <span class="skill-badge">REST APIs</span>
+              <span class="skill-badge">Stripe</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">Databases</h3>
+            </div>
+            <div class="skill-badges-wrapper">
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">MongoDB</span>
+              <span class="skill-badge">MySQL</span>
+              <span class="skill-badge">Redis</span>
+              <span class="skill-badge">Firebase</span>
+            </div>
+          </div>
+
+          <!-- AI/ML & Data Tools -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">AI/ML &amp; Data Tools</h3>
+            </div>
+            <div class="skill-badges-wrapper">
+              <span class="skill-badge">NumPy</span>
+              <span class="skill-badge">Pandas</span>
+              <span class="skill-badge">Matplotlib</span>
+              <span class="skill-badge">Spring AI</span>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+              </div>
+              <h3 class="skill-category-title">DevOps &amp; Cloud</h3>
+            </div>
+            <div class="skill-badges-wrapper">
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">Git &amp; GitHub</span>
+              <span class="skill-badge">Vercel</span>
+              <span class="skill-badge">Render</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Featured Engineering Strengths -->
+        <div class="strengths-card reveal-on-scroll">
+          <h3 class="strengths-title">
+            <span class="highlight" style="color: var(--accent-primary);">⚡</span> Areas of Focus &amp; Engineering
+            Strengths
+          </h3>
+          <div class="strengths-grid">
+            <div class="strength-item">
+              <div class="strength-header">
+                <span class="strength-bullet">▹</span>
+                <span class="strength-title">Product Engineering &amp; UX Craft</span>
+              </div>
+              <p class="strength-desc">Architecting intuitive, responsive products from data schema to production
+                release with ruthless attention to user experience.</p>
+            </div>
+            <div class="strength-item">
+              <div class="strength-header">
+                <span class="strength-bullet">▹</span>
+                <span class="strength-title">Full-Stack Architecture</span>
+              </div>
+              <p class="strength-desc">Building decoupled, resilient RESTful microservices and reactive interfaces
+                optimized for maintainability and speed.</p>
+            </div>
+            <div class="strength-item">
+              <div class="strength-header">
+                <span class="strength-bullet">▹</span>
+                <span class="strength-title">Algorithmic Problem Solving &amp; DSA</span>
+              </div>
+              <p class="strength-desc">Writing performant, clean, and defensively engineered solutions with deep focus
+                on time and space complexity.</p>
+            </div>
+            <div class="strength-item">
+              <div class="strength-header">
+                <span class="strength-bullet">▹</span>
+                <span class="strength-title">Applied AI &amp; Intelligent Workflows</span>
+              </div>
+              <p class="strength-desc">Integrating Spring AI pipelines, LLM document intelligence, and automated contest
+                evaluation workflows.</p>
+            </div>
+            <div class="strength-item">
+              <div class="strength-header">
+                <span class="strength-bullet">▹</span>
+                <span class="strength-title">Engineering Leadership &amp; Mentorship</span>
+              </div>
+              <p class="strength-desc">Spearheading competitive hackathon squads (Top 40 / 229) and empowering 80+
+                student engineers as a peer instructor.</p>
+            </div>
+            <div class="strength-item">
+              <div class="strength-header">
+                <span class="strength-bullet">▹</span>
+                <span class="strength-title">Defensive Engineering &amp; Reliability</span>
+              </div>
+              <p class="strength-desc">Enforcing robust input validation, automated contest integrity checks, rate
+                limiting, and zero-compromise stability.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- ========================================================================
+         3. Selected Work / Featured Projects Section
+         ======================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Featured Engineering</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            A selection of practical web applications, full-stack systems, and engineering projects built with clean
+            architecture and modern tooling.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="projects-filter-bar" role="tablist" aria-label="Project Categories">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All
+            Projects</button>
+          <button type="button" class="filter-btn" data-filter="fullstack" role="tab"
+            aria-selected="false">Full-Stack</button>
+          <button type="button" class="filter-btn" data-filter="automation" role="tab"
+            aria-selected="false">Automation</button>
+          <button type="button" class="filter-btn" data-filter="tools" role="tab" aria-selected="false">Systems &amp;
+            Tools</button>
+        </div>
+
+        <!-- 4 Featured Project Cards -->
+        <div class="featured-projects-grid">
+
+          <!-- Project 1: MindCompile -->
+          <article class="project-card reveal-on-scroll" data-category="fullstack">
+            <div class="project-card-header">
+              <div class="project-category-row">
+                <span class="project-category">Domain: Competitive Programming &amp; Integrity</span>
+                <span class="badge badge-cyan">Featured Full-Stack</span>
+              </div>
+              <h3 class="project-title">MindCompile</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-description">
+                Full-stack contest execution platform engineered for organizing competitive and blind coding
+                competitions with real-time submission evaluation.
+              </p>
+
+              <div class="project-highlights">
+                <div class="project-highlight-title">Problems Solved:</div>
+                <ul class="project-highlight-list">
+                  <li><span><strong>Contest Cheating &amp; Integrity:</strong> Prevented unfair means through automated
+                      detection algorithms and instant disqualification workflows.</span></li>
+                  <li><span><strong>Live Contest Operations:</strong> Engineered dynamic problem visibility and
+                      real-time score tracking for high-pressure blind coding tournaments.</span></li>
+                </ul>
+              </div>
+
+              <div class="project-tech-section">
+                <div class="project-tech-title">Technologies:</div>
+                <div class="project-tags">
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">Express.js</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">Contest Integrity</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://mind-compile-siescoms.onrender.com/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+                <a href="https://github.com/bharatnadar64/mind-compile" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: ChatMaster — WhatsApp Automation -->
+          <article class="project-card reveal-on-scroll" data-category="automation tools">
+            <div class="project-card-header">
+              <div class="project-category-row">
+                <span class="project-category">Domain: Process Automation &amp; Desktop Systems</span>
+                <span class="badge badge-emerald">Automation</span>
+              </div>
+              <h3 class="project-title">ChatMaster — WhatsApp Automation</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-description">
+                Python desktop automation engine that monitors incoming chat communications and executes unattended,
+                programmatic response workflows.
+              </p>
+
+              <div class="project-highlights">
+                <div class="project-highlight-title">Problems Solved:</div>
+                <ul class="project-highlight-list">
+                  <li><span><strong>Manual Messaging Overhead:</strong> Automated repetitive user communications using
+                      PyAutoGUI and Pyperclip for GUI navigation.</span></li>
+                  <li><span><strong>Unattended Message Dispatch:</strong> Programmed background message parsing and
+                      response handling directly through OS-level execution hooks.</span></li>
+                </ul>
+              </div>
+
+              <div class="project-tech-section">
+                <div class="project-tech-title">Technologies:</div>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">PyAutoGUI</span>
+                  <span class="project-tag">Pyperclip</span>
+                  <span class="project-tag">OS Automation</span>
+                  <span class="project-tag">Neural Networks</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/bharatnadar64/ChatMaster_WhatsApp" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Advanced File Manager & Directory Analyzer -->
+          <article class="project-card reveal-on-scroll" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-category-row">
+                <span class="project-category">Domain: Systems Software &amp; Data Structures</span>
+                <span class="badge">Systems &amp; DSA</span>
+              </div>
+              <h3 class="project-title">Advanced File Manager</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-description">
+                High-performance Java systems utility for structural directory traversal, batch file classification, and
+                automated format separation.
+              </p>
+
+              <div class="project-highlights">
+                <div class="project-highlight-title">Problems Solved:</div>
+                <ul class="project-highlight-list">
+                  <li><span><strong>Unorganized File Clutter:</strong> Automated high-volume file grouping and
+                      multi-tier directory separation across diverse file extensions.</span></li>
+                  <li><span><strong>Slow Algorithmic Scanning:</strong> Leveraged HashMaps and HashSets for fast
+                      metadata indexing, duplicate detection, and batch sorting.</span></li>
+                </ul>
+              </div>
+
+              <div class="project-tech-section">
+                <div class="project-tech-title">Technologies:</div>
+                <div class="project-tags">
+                  <span class="project-tag">Java</span>
+                  <span class="project-tag">Data Structures</span>
+                  <span class="project-tag">HashMap</span>
+                  <span class="project-tag">HashSet</span>
+                  <span class="project-tag">File I/O</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/bharatnadar64/File-Seperator" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Zyra -->
+          <article class="project-card reveal-on-scroll" data-category="fullstack">
+            <div class="project-card-header">
+              <div class="project-category-row">
+                <span class="project-category">Domain: E-Commerce &amp; Frontend Architecture</span>
+                <span class="badge badge-cyan">Live Web App</span>
+              </div>
+              <h3 class="project-title">Zyra</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-description">
+                Modern responsive e-commerce web application featuring promotional banners, multi-category catalogs, and
+                interactive shopping workflows.
+              </p>
+
+              <div class="project-highlights">
+                <div class="project-highlight-title">Problems Solved:</div>
+                <ul class="project-highlight-list">
+                  <li><span><strong>Cross-Device Inconsistency:</strong> Architected a mobile-first responsive layout
+                      ensuring fluid catalog navigation and fast page loads.</span></li>
+                  <li><span><strong>Cart State Synchronization:</strong> Engineered dynamic shopping cart counters and
+                      instant item feedback across client components.</span></li>
+                </ul>
+              </div>
+
+              <div class="project-tech-section">
+                <div class="project-tech-title">Technologies:</div>
+                <div class="project-tags">
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">HTML5</span>
+                  <span class="project-tag">CSS3</span>
+                  <span class="project-tag">Responsive UI</span>
+                  <span class="project-tag">E-Commerce</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://zyra-client-five.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+                <span class="badge" title="Source repository is private">Private Repository</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Generic GitHub Repositories Link CTA -->
+        <div class="projects-github-cta reveal-on-scroll">
+          <div class="github-cta-content">
+            <div class="github-cta-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </div>
+            <div class="github-cta-text">
+              <h3 class="github-cta-title">Explore More Projects on GitHub</h3>
+              <p class="github-cta-desc">
+                Looking for additional utilities, academic coursework, and open-source experiments? Browse all
+                repositories on my GitHub profile.
+              </p>
+            </div>
+          </div>
+          <a href="https://github.com/bharatnadar64?tab=repositories" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">
+            View All Repositories
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================
+         5. Experience Section
+         ======================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Work History</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">
+            Hands-on technical instructional experience demonstrating technical depth and communication skills.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience Item 1 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Programming Instructor</h3>
+                <span class="timeline-period">July 2024 – December 2025</span>
+              </div>
+              <div class="timeline-company">Anubhav Computer Institute — Mumbai, India</div>
+
+              <ul class="timeline-bullets">
+                <li class="timeline-bullet">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>Taught full-stack development, competitive programming, and modern web technologies to a diverse
+                    audience of over 80 students, ranging from school learners to working IT professionals.</span>
+                </li>
+                <li class="timeline-bullet">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>Mentored learners in foundational computer science concepts, object-oriented programming, data
+                    structures, and practical application building.</span>
+                </li>
+                <li class="timeline-bullet">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>Adapted technical curriculum and explanations across varied skill levels, cultivating strong
+                    technical communication and mentoring abilities.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. Leadership and Technical Activities Section
+         ======================================================================== -->
+    <section class="section" id="leadership">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Initiative &amp; Impact</span>
+          <h2 class="section-title">Leadership &amp; Technical Activities</h2>
+          <p class="section-subtitle">
+            Demonstrated ownership through national hackathons, technical event execution, and architectural
+            presentations.
+          </p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- IndiaNext Hackathon 2026 -->
+          <div class="achievement-card highlight-card reveal-on-scroll">
+            <div class="achievement-header">
+              <span class="achievement-tag">National Hackathon</span>
+              <span class="badge badge-cyan">Top 40 / 229 Teams</span>
+            </div>
+            <h3 class="achievement-title">IndiaNext Hackathon 2026</h3>
+            <div class="achievement-role">Role: Team Lead | Project: CyberShield</div>
+            <p class="achievement-desc">
+              Led the engineering team during a 24-hour national competition developing the CyberShield project. Placed
+              in the <strong>Top 40 out of 229 participating teams</strong>, managing end-to-end task distribution and
+              technical delivery under tight time constraints.
+            </p>
+          </div>
+
+          <!-- MindCompile - SIESCOMS Pixels 2026 -->
+          <div class="achievement-card reveal-on-scroll">
+            <div class="achievement-header">
+              <span class="achievement-tag">Technical Event Leadership</span>
+              <span class="badge badge-emerald">Pixels 2026</span>
+            </div>
+            <h3 class="achievement-title">MindCompile — SIESCOMS Pixels 2026</h3>
+            <div class="achievement-role">Role: Technical Event Lead / Competition Lead</div>
+            <p class="achievement-desc">
+              Led the end-to-end execution of a blind coding competition. Supervised participants, configured platform
+              requirements, and managed live event operations to ensure smooth and fair contest execution.
+            </p>
+          </div>
+
+          <!-- NEXORA 2026 Technical Presentation -->
+          <div class="achievement-card reveal-on-scroll">
+            <div class="achievement-header">
+              <span class="achievement-tag">Technical Analysis</span>
+              <span class="badge">Architecture</span>
+            </div>
+            <h3 class="achievement-title">NEXORA 2026</h3>
+            <div class="achievement-role">Activity: Technical Architecture Presentation</div>
+            <p class="achievement-desc">
+              Presented an in-depth technical analysis of Flipkart's software architecture and scalability strategies.
+              Received formal recognition for technical presentation quality and clarity in breaking down large-scale
+              distributed systems.
+            </p>
+          </div>
+
+          <!-- Alumni Committee 2026 -->
+          <div class="achievement-card reveal-on-scroll">
+            <div class="achievement-header">
+              <span class="achievement-tag">Community Coordination</span>
+              <span class="badge">Management</span>
+            </div>
+            <h3 class="achievement-title">Alumni Committee 2026</h3>
+            <div class="achievement-role">Role: Active Committee Member</div>
+            <p class="achievement-desc">
+              Managed alumni database operations, coordinated outreach activities, and organized event logistics for
+              Alumni Meet 2026 to foster engagement between graduates and current students.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. Education and Certifications Section
+         ======================================================================== -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Academics &amp; Credentials</span>
+          <h2 class="section-title">Education &amp; Certifications</h2>
+          <p class="section-subtitle">
+            Rigorous computer science education and verified technical certifications.
+          </p>
+        </div>
+
+        <div class="edu-cert-grid">
+          <!-- Education Column -->
+          <div class="edu-column">
+            <!-- Degree 1: MCA -->
+            <div class="edu-card reveal-on-scroll">
+              <div class="edu-card-top">
+                <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
+                <span class="edu-year">2025 – Present</span>
+              </div>
+              <div class="edu-inst">SIES College of Management Studies, Mumbai</div>
+              <p class="section-subtitle" style="font-size: 0.9rem;">
+                Advanced study in software engineering, distributed systems, algorithms, and application architecture.
+              </p>
+            </div>
+
+            <!-- Degree 2: B.Sc. IT -->
+            <div class="edu-card reveal-on-scroll">
+              <div class="edu-card-top">
+                <h3 class="edu-degree">Bachelor of Science in Information Technology</h3>
+                <span class="edu-year">2022 – 2025</span>
+              </div>
+              <div class="edu-inst">N.G. Acharya &amp; D.K. Marathe College, Mumbai</div>
+              <div class="edu-grade-row">
+                <span class="edu-grade-badge">9.55 CGPA</span>
+                <span class="edu-grade-text">Rank holder throughout the degree program</span>
+              </div>
+            </div>
+
+            <!-- Entrance Examinations -->
+            <div class="entrance-exams-card reveal-on-scroll">
+              <h4 class="entrance-exams-title">Entrance Examination Achievements</h4>
+              <div class="entrance-item">
+                • <strong>NIMCET 2025:</strong> All India Rank 1050; allotted an MCA seat at IIIT Vadodara.
+              </div>
+              <div class="entrance-item">
+                • <strong>MCA CET 2025:</strong> State Rank 607; allotted a seat at SIESCOMS.
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Column -->
+          <div class="cert-column">
+            <!-- Cert 1: NPTEL -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="cert-title">Getting Started with Competitive Programming</h4>
+                <div class="cert-issuer">NPTEL — IIT Gandhinagar &amp; IIT Madras</div>
+                <div class="cert-note">Algorithmic Problem Solving &amp; Optimization</div>
+              </div>
+            </div>
+
+            <!-- Cert 2: Microsoft Azure AI Fundamentals -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </div>
+              <div>
+                <h4 class="cert-title">Microsoft Certified: Azure AI Fundamentals (AZ-900)</h4>
+                <div class="cert-issuer">Microsoft</div>
+                <div class="cert-note">Listed on resume as AZ-900; verification noted in README</div>
+              </div>
+            </div>
+
+            <!-- Cert 3: Linux Fundamentals -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                  <line x1="7" y1="2" x2="7" y2="22"></line>
+                  <line x1="17" y1="2" x2="17" y2="22"></line>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <line x1="2" y1="7" x2="7" y2="7"></line>
+                  <line x1="2" y1="17" x2="7" y2="17"></line>
+                  <line x1="17" y1="17" x2="22" y2="17"></line>
+                  <line x1="17" y1="7" x2="22" y2="7"></line>
+                </svg>
+              </div>
+              <div>
+                <h4 class="cert-title">Linux Fundamentals (RH104)</h4>
+                <div class="cert-issuer">Red Hat</div>
+                <div class="cert-note">Operating System Architecture &amp; CLI Administration</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. Contact Section
+         ======================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal-on-scroll">
+          <span class="section-eyebrow" style="margin-bottom: 1rem;">Let's Build Together</span>
+          <h2 class="contact-headline">Have an opportunity or an interesting problem to solve?</h2>
+          <p class="contact-copy">
+            I’m interested in software engineering opportunities, meaningful technical challenges, and collaborations
+            where I can build useful products and continue growing as an engineer.
+          </p>
+
+          <div class="contact-methods-grid">
+            <!-- Email Primary CTA -->
+            <a href="mailto:bharatnadar64@gmail.com" class="contact-action-btn contact-email-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Email Me Directly
+            </a>
+
+            <!-- Copy Email Button -->
+            <button type="button" class="contact-action-btn contact-copy-btn" id="copy-email-btn"
+              aria-label="Copy email address to clipboard">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy Email
+            </button>
+
+            <!-- Phone Direct Link -->
+            <a href="tel:+919969607140" class="contact-action-btn contact-phone-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              +91 9969607140
+            </a>
+
+            <!-- LinkedIn CTA -->
+            <a href="https://linkedin.com/in/bharat-nadar-80ab6426a" target="_blank" rel="noopener noreferrer"
+              class="contact-action-btn contact-social-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              LinkedIn
+            </a>
+
+            <!-- GitHub CTA -->
+            <a href="https://github.com/bharatnadar64" target="_blank" rel="noopener noreferrer"
+              class="contact-action-btn contact-social-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              GitHub
+            </a>
+
+            <!-- LeetCode CTA -->
+            <a href="https://leetcode.com/u/bharatnadar64/" target="_blank" rel="noopener noreferrer"
+              class="contact-action-btn contact-social-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              LeetCode
+            </a>
+          </div>
+
+          <div class="contact-direct-info">
+            <span>✉ bharatnadar64@gmail.com</span>
+            <span>📍 Mumbai, Maharashtra, India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       9. Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="footer-title">Bharat Nadar</span>
+        <span class="footer-desc">Software Developer &bull; Mumbai, India</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/bharatnadar64" target="_blank" rel="noopener noreferrer"
+          class="footer-link">GitHub</a>
+        <a href="https://linkedin.com/in/bharat-nadar-80ab6426a" target="_blank" rel="noopener noreferrer"
+          class="footer-link">LinkedIn</a>
+        <a href="https://leetcode.com/u/bharatnadar64/" target="_blank" rel="noopener noreferrer"
+          class="footer-link">LeetCode</a>
+        <a href="./assets/documents/bharat-resume.pdf" download="bharat-resume.pdf" target="_blank"
+          class="footer-link">Resume</a>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 0.82rem; color: var(--text-muted);">&copy; <span id="current-year">2026</span> Bharat
+          Nadar</span>
+        <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Back to top of page">
+          ↑ Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Alert -->
+  <div class="toast-alert" id="toast-alert" role="status" aria-live="polite">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span class="toast-message">Email address copied to clipboard!</span>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
