@@ -1,218 +1,203 @@
 /**
- * Bharat Nadar - Developer Portfolio
- * Vanilla JavaScript (ES6+) Interactions
- * - Progressive enhancement
- * - Active section scroll spy (IntersectionObserver)
- * - Mobile drawer navigation
- * - Project category filtering
- * - Expandable secondary projects
- * - Copy email to clipboard with fallback & toast alert
- * - Back to top smooth scroll
- * - Dynamic copyright year
+ * Bharat Nadar - Developer Portfolio (Vanilla JS, ES6+)
+ * Original features: scroll spy, mobile drawer, project filter, reveal on scroll,
+ * copy email with fallback + toast, back to top, dynamic year.
+ * New: scroll progress bar, header state, mobile sticky action bar,
+ * stat count-up, accessible filter tabs, drawer focus/aria handling.
  */
-
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Progressive Enhancement Flag
-    document.documentElement.classList.add('js-loaded');
+    const root = document.documentElement;
+    root.classList.add('js-loaded');
 
-    // 2. Dynamic Copyright Year
-    const yearElement = document.getElementById('current-year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const hasIO = 'IntersectionObserver' in window;
 
-    // 3. Mobile Navigation Drawer
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileDrawer = document.getElementById('mobile-drawer');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    // Dynamic year
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    if (mobileToggle && mobileDrawer) {
-        const toggleDrawer = (isOpen) => {
-            const willOpen = typeof isOpen === 'boolean' ? isOpen : !mobileDrawer.classList.contains('is-active');
-            mobileDrawer.classList.toggle('is-active', willOpen);
-            mobileToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-
-            // Update toggle icon
-            const iconMenu = mobileToggle.querySelector('.icon-menu');
-            const iconClose = mobileToggle.querySelector('.icon-close');
-            if (iconMenu && iconClose) {
-                iconMenu.style.display = willOpen ? 'none' : 'block';
-                iconClose.style.display = willOpen ? 'block' : 'none';
-            }
-
-            // Prevent background scrolling when drawer is open
-            document.body.style.overflow = willOpen ? 'hidden' : '';
-        };
-
-        mobileToggle.addEventListener('click', () => toggleDrawer());
-
-        // Close drawer when mobile link is tapped
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                toggleDrawer(false);
-            });
-        });
-
-        // Close on Escape key
+    // Mobile drawer
+    const toggle = document.getElementById('mobile-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const setDrawer = (open) => {
+        drawer.classList.toggle('is-active', open);
+        drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        const menu = toggle.querySelector('.icon-menu');
+        const close = toggle.querySelector('.icon-close');
+        if (menu && close) {
+            menu.style.display = open ? 'none' : 'block';
+            close.style.display = open ? 'block' : 'none';
+        }
+        document.body.style.overflow = open ? 'hidden' : '';
+    };
+    if (toggle && drawer) {
+        toggle.addEventListener('click', () => setDrawer(!drawer.classList.contains('is-active')));
+        drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setDrawer(false)));
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileDrawer.classList.contains('is-active')) {
-                toggleDrawer(false);
-                mobileToggle.focus();
+            if (e.key === 'Escape' && drawer.classList.contains('is-active')) {
+                setDrawer(false);
+                toggle.focus();
             }
+        });
+        // Close drawer if resized to desktop
+        window.matchMedia('(min-width: 900px)').addEventListener('change', (e) => {
+            if (e.matches) setDrawer(false);
         });
     }
 
-    // 4. Active Section Scroll Spy via IntersectionObserver
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section[id]');
-
-    if ('IntersectionObserver' in window && sections.length > 0) {
-        const observerOptions = {
-            root: null,
-            rootMargin: '-20% 0px -65% 0px',
-            threshold: 0
-        };
-
-        const sectionObserver = new IntersectionObserver((entries) => {
+    // Scroll spy (desktop nav + mobile drawer links)
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+    const sections = document.querySelectorAll('main section[id]');
+    if (hasIO && sections.length) {
+        const spy = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const currentId = entry.target.getAttribute('id');
-                    navLinks.forEach(link => {
-                        const href = link.getAttribute('href');
-                        if (href === `#${currentId}`) {
-                            link.classList.add('active');
-                        } else {
-                            link.classList.remove('active');
-                        }
-                    });
-                }
+                if (!entry.isIntersecting) return;
+                const id = entry.target.id;
+                navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
             });
-        }, observerOptions);
-
-        sections.forEach(section => sectionObserver.observe(section));
+        }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+        sections.forEach(s => spy.observe(s));
     }
 
-    // 5. Scroll Reveal Effect via IntersectionObserver
-    const revealElements = document.querySelectorAll('.reveal-on-scroll');
-    if ('IntersectionObserver' in window && revealElements.length > 0) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal-on-scroll');
+    if (hasIO && reveals.length) {
+        const revealIO = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-revealed');
-                    observer.unobserve(entry.target);
+                    obs.unobserve(entry.target);
                 }
             });
-        }, {
-            root: null,
-            rootMargin: '0px 0px -50px 0px',
-            threshold: 0.1
-        });
-
-        revealElements.forEach(el => revealObserver.observe(el));
+        }, { rootMargin: '0px 0px -40px 0px', threshold: 0.08 });
+        reveals.forEach(el => revealIO.observe(el));
     } else {
-        // Fallback: reveal immediately
-        revealElements.forEach(el => el.classList.add('is-revealed'));
+        reveals.forEach(el => el.classList.add('is-revealed'));
     }
 
-    // 6. Project Category Filtering
+    // Project filtering (accessible tabs)
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card[data-category]');
-
-    if (filterBtns.length > 0 && projectCards.length > 0) {
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Active tab styling
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filterValue = btn.getAttribute('data-filter');
-
-                projectCards.forEach(card => {
-                    const categories = card.getAttribute('data-category').split(' ');
-                    if (filterValue === 'all' || categories.includes(filterValue)) {
-                        card.style.display = 'flex';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, 10);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(10px)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 200);
-                    }
-                });
+    const cards = document.querySelectorAll('.project-card[data-category]');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => {
+                const on = b === btn;
+                b.classList.toggle('active', on);
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            const value = btn.dataset.filter;
+            cards.forEach(card => {
+                const show = value === 'all' || card.dataset.category.split(' ').includes(value);
+                card.hidden = !show;
+                if (show) card.classList.add('is-revealed');
             });
         });
+    });
+
+    // Header state, progress bar, mobile action bar (one rAF-throttled scroll handler)
+    const header = document.getElementById('site-header');
+    const progress = document.getElementById('progress');
+    const actionBar = document.getElementById('action-bar');
+    const hero = document.getElementById('about');
+    const contact = document.getElementById('contact');
+    let ticking = false;
+
+    const onScroll = () => {
+        const y = window.scrollY;
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        if (header) header.classList.toggle('is-scrolled', y > 8);
+        if (progress && max > 0) progress.style.transform = `scaleX(${Math.min(y / max, 1)})`;
+        if (actionBar && hero && contact) {
+            // Show after the hero CTAs scroll away; hide once the full contact section is on screen
+            const heroBottom = hero.offsetTop + hero.offsetHeight * 0.6;
+            const contactTop = contact.offsetTop - window.innerHeight * 0.4;
+            actionBar.classList.toggle('is-visible', y > heroBottom && y < contactTop);
+        }
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(onScroll);
+            ticking = true;
+        }
+    }, { passive: true });
+    onScroll();
+
+    // Stat count-up (runs once when stats come into view)
+    const counters = document.querySelectorAll('[data-count]');
+    const format = (el, value) => {
+        const dec = parseInt(el.dataset.dec || '0', 10);
+        el.textContent = (el.dataset.prefix || '') + value.toFixed(dec) + (el.dataset.suffix || '');
+    };
+    const runCounter = (el) => {
+        const target = parseFloat(el.dataset.count);
+        if (reduceMotion) return format(el, target);
+        const duration = 1200;
+        const start = performance.now();
+        const step = (now) => {
+            const t = Math.min((now - start) / duration, 1);
+            format(el, target * (1 - Math.pow(1 - t, 3)));
+            if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    };
+    if (hasIO && counters.length) {
+        const countIO = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounter(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.6 });
+        counters.forEach(el => countIO.observe(el));
     }
 
-    // 7. Copy Email to Clipboard with Fallback & Toast Alert
-    const copyEmailBtn = document.getElementById('copy-email-btn');
-    const toastAlert = document.getElementById('toast-alert');
-    const targetEmail = 'bharatnadar64@gmail.com';
+    // Copy email with fallback + toast
+    const copyBtn = document.getElementById('copy-email-btn');
+    const toast = document.getElementById('toast-alert');
+    const email = 'bharatnadar64@gmail.com';
+    let toastTimer;
 
     const showToast = (message) => {
-        if (!toastAlert) return;
-        const toastMessage = toastAlert.querySelector('.toast-message');
-        if (toastMessage) toastMessage.textContent = message;
-
-        toastAlert.classList.add('is-visible');
-        setTimeout(() => {
-            toastAlert.classList.remove('is-visible');
-        }, 3200);
+        if (!toast) return;
+        const msg = toast.querySelector('.toast-message');
+        if (msg) msg.textContent = message;
+        toast.classList.add('is-visible');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 3200);
     };
 
-    if (copyEmailBtn) {
-        copyEmailBtn.addEventListener('click', async () => {
-            let succeeded = false;
-
-            // Modern Clipboard API
+    if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+            let ok = false;
             if (navigator.clipboard && window.isSecureContext) {
+                try { await navigator.clipboard.writeText(email); ok = true; } catch (_) { ok = false; }
+            }
+            if (!ok) {
                 try {
-                    await navigator.clipboard.writeText(targetEmail);
-                    succeeded = true;
-                } catch (err) {
-                    succeeded = false;
-                }
+                    const ta = document.createElement('textarea');
+                    ta.value = email;
+                    ta.setAttribute('readonly', '');
+                    ta.style.cssText = 'position:fixed;left:-9999px;top:-9999px;';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    ok = document.execCommand('copy');
+                    document.body.removeChild(ta);
+                } catch (_) { ok = false; }
             }
-
-            // Legacy fallback
-            if (!succeeded) {
-                try {
-                    const textArea = document.createElement('textarea');
-                    textArea.value = targetEmail;
-                    textArea.style.position = 'fixed';
-                    textArea.style.left = '-999999px';
-                    textArea.style.top = '-999999px';
-                    document.body.appendChild(textArea);
-                    textArea.focus();
-                    textArea.select();
-                    succeeded = document.execCommand('copy');
-                    document.body.removeChild(textArea);
-                } catch (err) {
-                    succeeded = false;
-                }
-            }
-
-            if (succeeded) {
-                showToast('Email address copied to clipboard!');
-            } else {
-                // Direct fallback: prompt user
-                showToast(`Email: ${targetEmail}`);
-            }
+            showToast(ok ? 'Email address copied to clipboard!' : `Email: ${email}`);
         });
     }
 
-    // 8. Back to Top Button
-    const backToTopBtn = document.getElementById('back-to-top');
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener('click', (e) => {
+    // Back to top
+    const topBtn = document.getElementById('back-to-top');
+    if (topBtn) {
+        topBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
         });
     }
 });
